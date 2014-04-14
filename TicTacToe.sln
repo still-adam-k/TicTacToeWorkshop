@@ -1,8 +1,6 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2013
-VisualStudioVersion = 12.0.21005.1
-MinimumVisualStudioVersion = 10.0.40219.1
+# Visual Studio 2012
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tests", "Test\Tests.csproj", "{15828DA6-179B-4EA8-9DBB-4B38D9C84B7C}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TicTacToe.Game", "TicTacToe.Game\TicTacToe.Game.csproj", "{9C745CC2-C2C4-4CFC-B13E-F747FE5CC88F}"
@@ -17,6 +15,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{0EB8DA
 		.nuget\NuGet.exe = .nuget\NuGet.exe
 		.nuget\NuGet.targets = .nuget\NuGet.targets
 	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebFrontEnd", "WebFrontEnd\WebFrontEnd.csproj", "{D3F9ABEB-7D8B-436B-BF35-783DB5429906}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -40,6 +40,10 @@ Global
 		{83C739C3-161B-46D1-8123-3957355C0BA6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{83C739C3-161B-46D1-8123-3957355C0BA6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{83C739C3-161B-46D1-8123-3957355C0BA6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D3F9ABEB-7D8B-436B-BF35-783DB5429906}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D3F9ABEB-7D8B-436B-BF35-783DB5429906}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D3F9ABEB-7D8B-436B-BF35-783DB5429906}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D3F9ABEB-7D8B-436B-BF35-783DB5429906}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

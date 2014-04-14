@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.IO;
 using System.Linq;
 using System.Text;
@@ -9,11 +10,18 @@ namespace TicTacToe_Game.Infrastructure
 {
     class GameRepository : IGameRepository
     {
+        private static GameRepository instance;
+
         private readonly string fileName = "MyStorage.txt";
 
-        public GameRepository()
+        private GameRepository()
         {
             gamesList = new List<Game>();
+        }
+
+        public static GameRepository Create()
+        {
+            return instance ?? (instance = new GameRepository());
         }
 
         private List<Game> gamesList { get; set; }

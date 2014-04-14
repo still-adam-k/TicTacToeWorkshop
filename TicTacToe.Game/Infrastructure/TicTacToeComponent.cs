@@ -13,7 +13,7 @@ namespace TicTacToe_Game.Infrastructure
 
         public TicTacToeComponent()
         {
-            this.repository = new GameRepository();
+            this.repository = GameRepository.Create();
         }
 
         public int StartGame()

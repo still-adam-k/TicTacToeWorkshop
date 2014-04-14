@@ -10,7 +10,7 @@ namespace TicTacToe_Game.GameDomain
         {   
         }
 
-        public Game PutMarkerOnField(Field moveToPlay)
+        public void PutMarkerOnField(Field moveToPlay)
         {
             throw new NotImplementedException();
         }

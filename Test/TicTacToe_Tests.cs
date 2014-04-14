@@ -71,8 +71,8 @@ namespace TicTacToe_Test
         [Fact]
         public void Player_one_fills_top_horizontal_line__player_one_wins()
         {
-            var playerOneMoves = MovesHelperExtension.CreateMovesForFieldsIndexed(1, 2, 3);
-            var playerTwoMoves = MovesHelperExtension.CreateMovesForFieldsIndexed(4, 5);
+            var playerOneMoves = MovesHelperExtension.CreateMovesForFieldsIndexed(0, 1, 2);
+            var playerTwoMoves = MovesHelperExtension.CreateMovesForFieldsIndexed(3, 4);
 
             var moveList = MovesHelperExtension.InterleaveMoves(playerOneMoves, playerTwoMoves);
 
@@ -80,7 +80,7 @@ namespace TicTacToe_Test
 
             foreach (var move in moveList)
             {
-                game = game.PutMarkerOnField(move);
+                game.PutMarkerOnField(move);
             }
 
             game.GetGameCurrentStatus().ShouldBeEquivalentTo("Player One Wins");
@@ -89,8 +89,8 @@ namespace TicTacToe_Test
         [Fact]
         public void Player_two_fills_line_before_player_one__player_two_wins()
         {
-            var playerOneMoves = MovesHelperExtension.CreateMovesForFieldsIndexed(4, 5, 7);
-            var playerTwoMoves = MovesHelperExtension.CreateMovesForFieldsIndexed(1, 2, 3);
+            var playerOneMoves = MovesHelperExtension.CreateMovesForFieldsIndexed(3, 4, 6);
+            var playerTwoMoves = MovesHelperExtension.CreateMovesForFieldsIndexed(0, 1, 2);
 
             var moveList = MovesHelperExtension.InterleaveMoves(playerOneMoves, playerTwoMoves);
 
@@ -98,7 +98,7 @@ namespace TicTacToe_Test
 
             foreach (var move in moveList)
             {
-                game = game.PutMarkerOnField(move);
+                game.PutMarkerOnField(move);
             }
 
             game.GetGameCurrentStatus().ShouldBeEquivalentTo("Player Two Wins");
@@ -107,8 +107,8 @@ namespace TicTacToe_Test
         [Fact]
         public void Player_one_fills_middle_horizontal_line__player_one_wins()
         {
-            var playerOneMoves = MovesHelperExtension.CreateMovesForFieldsIndexed(4, 5, 6);
-            var playerTwoMoves = MovesHelperExtension.CreateMovesForFieldsIndexed(1, 2);
+            var playerOneMoves = MovesHelperExtension.CreateMovesForFieldsIndexed(3, 4, 5);
+            var playerTwoMoves = MovesHelperExtension.CreateMovesForFieldsIndexed(0, 1);
 
             var moveList = MovesHelperExtension.InterleaveMoves(playerOneMoves, playerTwoMoves);
 
@@ -116,7 +116,7 @@ namespace TicTacToe_Test
 
             foreach (var move in moveList)
             {
-                game = game.PutMarkerOnField(move);
+                game.PutMarkerOnField(move);
             }
 
             game.GetGameCurrentStatus().ShouldBeEquivalentTo("Player One Wins");
@@ -125,8 +125,8 @@ namespace TicTacToe_Test
         [Fact]
         public void Player_one_fills_bottom_horizontal_line__player_one_wins()
         {
-            var playerOneMoves = MovesHelperExtension.CreateMovesForFieldsIndexed(7, 8, 9);
-            var playerTwoMoves = MovesHelperExtension.CreateMovesForFieldsIndexed(1, 2);
+            var playerOneMoves = MovesHelperExtension.CreateMovesForFieldsIndexed(6, 7, 8);
+            var playerTwoMoves = MovesHelperExtension.CreateMovesForFieldsIndexed(0, 1);
 
             var moveList = MovesHelperExtension.InterleaveMoves(playerOneMoves, playerTwoMoves);
 
@@ -134,7 +134,7 @@ namespace TicTacToe_Test
 
             foreach (var move in moveList)
             {
-                game = game.PutMarkerOnField(move);
+                game.PutMarkerOnField(move);
             }
 
             game.GetGameCurrentStatus().ShouldBeEquivalentTo("Player One Wins");
@@ -143,8 +143,8 @@ namespace TicTacToe_Test
         [Fact]
         public void Player_one_fills_left_vertical_line__player_one_wins()
         {
-            var playerOneMoves = MovesHelperExtension.CreateMovesForFieldsIndexed(1, 4, 7);
-            var playerTwoMoves = MovesHelperExtension.CreateMovesForFieldsIndexed(8, 9);
+            var playerOneMoves = MovesHelperExtension.CreateMovesForFieldsIndexed(0, 3, 6);
+            var playerTwoMoves = MovesHelperExtension.CreateMovesForFieldsIndexed(7, 9);
 
             var moveList = MovesHelperExtension.InterleaveMoves(playerOneMoves, playerTwoMoves);
 
@@ -152,7 +152,7 @@ namespace TicTacToe_Test
 
             foreach (var move in moveList)
             {
-                game = game.PutMarkerOnField(move);
+                game.PutMarkerOnField(move);
             }
 
             game.GetGameCurrentStatus().ShouldBeEquivalentTo("Player One Wins");
@@ -162,8 +162,8 @@ namespace TicTacToe_Test
         [Fact]
         public void Player_one_fills_middle_vertical_line__player_one_wins()
         {
-            var playerOneMoves = MovesHelperExtension.CreateMovesForFieldsIndexed(2, 5, 8);
-            var playerTwoMoves = MovesHelperExtension.CreateMovesForFieldsIndexed(7, 9);
+            var playerOneMoves = MovesHelperExtension.CreateMovesForFieldsIndexed(1, 4, 7);
+            var playerTwoMoves = MovesHelperExtension.CreateMovesForFieldsIndexed(6, 7);
 
             var moveList = MovesHelperExtension.InterleaveMoves(playerOneMoves, playerTwoMoves);
 
@@ -171,7 +171,7 @@ namespace TicTacToe_Test
 
             foreach (var move in moveList)
             {
-                game = game.PutMarkerOnField(move);
+                game.PutMarkerOnField(move);
             }
 
             game.GetGameCurrentStatus().ShouldBeEquivalentTo("Player One Wins");
@@ -180,8 +180,8 @@ namespace TicTacToe_Test
         [Fact]
         public void Player_one_fills_right_vertical_line__player_one_wins()
         {
-            var playerOneMoves = MovesHelperExtension.CreateMovesForFieldsIndexed(3, 6, 9);
-            var playerTwoMoves = MovesHelperExtension.CreateMovesForFieldsIndexed(7, 8);
+            var playerOneMoves = MovesHelperExtension.CreateMovesForFieldsIndexed(2, 5, 8);
+            var playerTwoMoves = MovesHelperExtension.CreateMovesForFieldsIndexed(6, 7);
 
             var moveList = MovesHelperExtension.InterleaveMoves(playerOneMoves, playerTwoMoves);
 
@@ -189,7 +189,7 @@ namespace TicTacToe_Test
 
             foreach (var move in moveList)
             {
-                game = game.PutMarkerOnField(move);
+                game.PutMarkerOnField(move);
             }
 
             game.GetGameCurrentStatus().ShouldBeEquivalentTo("Player One Wins");
@@ -198,8 +198,8 @@ namespace TicTacToe_Test
         [Fact]
         public void Player_one_fills_diagonal_line__player_one_wins()
         {
-            var playerOneMoves = MovesHelperExtension.CreateMovesForFieldsIndexed(1, 5, 9);
-            var playerTwoMoves = MovesHelperExtension.CreateMovesForFieldsIndexed(7, 8);
+            var playerOneMoves = MovesHelperExtension.CreateMovesForFieldsIndexed(0, 4, 8);
+            var playerTwoMoves = MovesHelperExtension.CreateMovesForFieldsIndexed(6, 7);
 
             var moveList = MovesHelperExtension.InterleaveMoves(playerOneMoves, playerTwoMoves);
 
@@ -207,7 +207,7 @@ namespace TicTacToe_Test
 
             foreach (var move in moveList)
             {
-                game = game.PutMarkerOnField(move);
+                game.PutMarkerOnField(move);
             }
 
             game.GetGameCurrentStatus().ShouldBeEquivalentTo("Player One Wins");
